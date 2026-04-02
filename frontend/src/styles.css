@@ -1,0 +1,289 @@
+:root {
+  font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+  color: #102a43;
+  background:
+    radial-gradient(circle at top left, rgba(15, 118, 110, 0.18), transparent 24%),
+    linear-gradient(135deg, #f7fbff 0%, #ecf5ff 50%, #f8fafc 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+select {
+  font: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 32px 20px 48px;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  margin: 6px 0 10px;
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  line-height: 1.05;
+}
+
+.hero-copy {
+  max-width: 720px;
+  margin: 0;
+  color: #486581;
+  font-size: 1rem;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  gap: 24px;
+}
+
+.content-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 24px;
+  box-shadow: 0 20px 55px rgba(15, 23, 42, 0.08);
+}
+
+.sidebar {
+  padding: 24px;
+  height: fit-content;
+}
+
+.sidebar-header h2,
+.compare-card h2,
+.movers-card h3 {
+  margin: 4px 0 0;
+}
+
+.eyebrow {
+  margin: 0;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #0f766e;
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+.company-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.company-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  border: none;
+  border-radius: 18px;
+  padding: 16px;
+  cursor: pointer;
+  text-align: left;
+  background: linear-gradient(135deg, #f8fafc, #eef8ff);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.company-item:hover,
+.company-item.active {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(15, 118, 110, 0.16);
+  background: linear-gradient(135deg, #d8fbf4, #eefbf7);
+}
+
+.company-symbol {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #102a43;
+}
+
+.company-name {
+  color: #486581;
+  font-size: 0.92rem;
+}
+
+.range-control {
+  min-width: 200px;
+  padding: 18px 20px;
+}
+
+.range-control label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+  color: #486581;
+}
+
+.range-control select,
+.compare-controls select {
+  width: 100%;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 14px;
+  padding: 12px 14px;
+  background: white;
+}
+
+.summary-grid,
+.movers-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.stat-card {
+  padding: 18px 20px;
+}
+
+.stat-card p {
+  margin: 0 0 8px;
+  color: #486581;
+}
+
+.stat-card h3 {
+  margin: 0;
+  font-size: 1.7rem;
+}
+
+.chart-card,
+.compare-card,
+.movers-card,
+.loading-card {
+  padding: 20px;
+}
+
+.chart-wrapper {
+  height: 360px;
+}
+
+.compare-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.compare-controls {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  flex: 1;
+}
+
+.primary-button {
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #0f766e, #0ea5a4);
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 12px 18px;
+}
+
+.primary-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.movers-card {
+  padding-bottom: 12px;
+}
+
+.movers-list {
+  margin-top: 18px;
+}
+
+.mover-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.mover-item span {
+  display: block;
+  margin-top: 4px;
+  color: #486581;
+  font-size: 0.9rem;
+}
+
+.positive {
+  color: #15803d;
+  font-weight: 700;
+}
+
+.negative {
+  color: #b91c1c;
+  font-weight: 700;
+}
+
+.error-banner {
+  margin-bottom: 18px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.loading-card {
+  text-align: center;
+  color: #486581;
+}
+
+@media (max-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero,
+  .compare-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 720px) {
+  .summary-grid,
+  .movers-grid,
+  .compare-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .app-shell {
+    padding: 20px 14px 36px;
+  }
+
+  .chart-wrapper {
+    height: 300px;
+  }
+}

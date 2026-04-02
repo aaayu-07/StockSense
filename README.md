@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # StockSense SaaS
 
 StockSense is a JWT-authenticated fintech SaaS platform built with FastAPI, SQLite-ready SQLAlchemy models, React, Vite, Chart.js, Axios, and Tailwind CSS. It combines secure user accounts with stock analytics, watchlists, recent activity tracking, market movers, and a modern glassmorphism dashboard.
@@ -116,3 +117,7 @@ Protected:
 - `docs/screenshots/auth-flow.png`
 - `docs/screenshots/dashboard-dark-theme.png`
 - `docs/screenshots/watchlist-and-compare.png`
+=======
+# StockSense
+StockSense – A full-stack stock data intelligence dashboard with FastAPI backend and React frontend, featuring real-time insights, comparisons, and interactive visualizations.
+

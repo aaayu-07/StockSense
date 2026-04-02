@@ -121,7 +121,23 @@ http://localhost:5173
 
 ## 📸 Screenshots
 
-(Add your project screenshots here)
+### 🏠 Homepage (Dark Mode)
+![Homepage](docs/homepage.png)
+
+### 🌞 Homepage (Light Mode)
+![Light Homepage](docs/lighthomepage.png)
+
+### 📊 Dashboard
+![Dashboard](docs/dashboard.png)
+
+### 📈 Visualization
+![Visualization](docs/visualization.png)
+
+### 🔍 Features Section
+![Features](docs/features.png)
+
+### 💰 Pricing Page
+![Pricing](docs/pricing.png)
 
 ---
 

@@ -1,77 +1,99 @@
-<<<<<<< HEAD
-# StockSense SaaS
+# 🚀 StockSense – Stock Data Intelligence Dashboard
 
-StockSense is a JWT-authenticated fintech SaaS platform built with FastAPI, SQLite-ready SQLAlchemy models, React, Vite, Chart.js, Axios, and Tailwind CSS. It combines secure user accounts with stock analytics, watchlists, recent activity tracking, market movers, and a modern glassmorphism dashboard.
+StockSense is a full-stack stock analytics platform that provides real-time insights, stock comparisons, and interactive visualizations. It combines a modern React frontend with a FastAPI backend to deliver a smooth, scalable, and production-ready SaaS experience.
 
-## SaaS Features
+---
 
-- Secure signup and login with hashed passwords and JWT tokens
-- Protected stock data, summary, and comparison APIs
-- User-specific watchlists and last viewed stocks
-- Dark fintech dashboard with Tailwind CSS, responsive layout, and glass cards
-- Toast notifications, loading skeletons, error states, and logout flow
-- Pricing/upgrade section and account snapshot UI
-- SQLite by default with a PostgreSQL-ready `DATABASE_URL` configuration
+## 🌐 Live Demo
 
-## Project Structure
+* **Frontend:** https://stock-sense-pearl-xi.vercel.app/
+* **Backend API:** https://stocksense-3jyv.onrender.com/docs
+
+---
+
+## 📌 Overview
+
+StockSense helps users analyze stock performance, compare companies, and visualize trends using real-time data. The platform is designed with a clean UI, fast backend processing, and scalable architecture.
+
+---
+
+## ⚙️ Tech Stack
+
+### Frontend
+
+* React (Vite)
+* Tailwind CSS
+* Chart.js
+* Axios
+
+### Backend
+
+* FastAPI
+* SQLAlchemy
+* SQLite (PostgreSQL-ready)
+* JWT Authentication
+
+### Data Source
+
+* Yahoo Finance (yfinance)
+
+### Deployment
+
+* Frontend: Vercel
+* Backend: Render
+
+---
+
+## ✨ Features
+
+* 📊 Real-time stock data visualization
+* 📈 Interactive charts (30-day, 90-day trends)
+* 🔍 Stock comparison (performance & volatility)
+* 📉 Market movers (top gainers & losers)
+* 👤 JWT-based authentication system
+* ⭐ Watchlist & recent activity tracking
+* 🌙 Futuristic UI with dark/light mode
+* ⚡ Fast API with caching support
+
+---
+
+## 📁 Project Structure
 
 ```text
 StockSense/
 ├── backend/
-│   ├── data/
 │   ├── routes/
-│   │   ├── __init__.py
-│   │   ├── auth_routes.py
-│   │   ├── stock_routes.py
-│   │   └── user_routes.py
 │   ├── services/
-│   │   ├── __init__.py
-│   │   ├── stock_service.py
-│   │   └── user_service.py
-│   ├── auth.py
-│   ├── database.py
 │   ├── main.py
 │   ├── models.py
-│   ├── requirements.txt
-│   └── schemas.py
+│   ├── database.py
+│   └── requirements.txt
 ├── frontend/
 │   ├── src/
-│   │   ├── components/
-│   │   ├── context/
-│   │   ├── pages/
-│   │   ├── services/
-│   │   ├── App.jsx
-│   │   ├── index.css
-│   │   └── main.jsx
-│   ├── index.html
-│   ├── package.json
-│   ├── postcss.config.js
-│   ├── tailwind.config.js
-│   └── vite.config.js
+│   ├── components/
+│   ├── App.jsx
+│   └── package.json
 └── README.md
 ```
 
-## Backend Setup
+---
+
+## 🛠️ Backend Setup
 
 ```bash
 cd backend
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-uvicorn main:app --reload --host 0.0.0.0 --port 8000
+uvicorn main:app --reload
 ```
 
-Optional environment variables:
+API Docs:
+http://127.0.0.1:8000/docs
 
-- `DATABASE_URL` for PostgreSQL or another SQLAlchemy-supported database
-- `JWT_SECRET_KEY` to override the default JWT secret
-- `ACCESS_TOKEN_EXPIRE_MINUTES` to control token lifetime
+---
 
-API docs:
-
-- [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
-
-## Frontend Setup
+## 💻 Frontend Setup
 
 ```bash
 cd frontend
@@ -79,45 +101,59 @@ npm install
 npm run dev
 ```
 
-Frontend dev server:
+Frontend:
+http://localhost:5173
 
-- [http://localhost:5173](http://localhost:5173)
+---
 
-The Vite proxy forwards `/api/*` calls to `http://127.0.0.1:8000`.
+## 🔐 Environment Variables
 
-## API Overview
+### Backend
 
-Public:
+* `DATABASE_URL` → Database connection
+* `JWT_SECRET_KEY` → Secret for authentication
 
-- `POST /signup`
-- `POST /login`
-- `GET /companies`
-- `GET /market-movers`
+### Frontend
 
-Protected:
+* `VITE_API_URL` → Backend URL
 
-- `GET /data/{symbol}`
-- `GET /summary/{symbol}`
-- `GET /compare`
-- `GET /me`
-- `GET /watchlist`
-- `POST /watchlist/add`
-- `DELETE /watchlist/remove`
+---
 
-## Default User Flow
+## 📸 Screenshots
 
-1. Sign up with full name, email, and password.
-2. Receive a JWT token and redirect into the dashboard.
-3. Explore protected stock analytics.
-4. Save favorite stocks to your watchlist.
-5. Track recent stock views in your personal workspace.
+(Add your project screenshots here)
 
-## Screenshots
+---
 
-- `docs/screenshots/auth-flow.png`
-- `docs/screenshots/dashboard-dark-theme.png`
-- `docs/screenshots/watchlist-and-compare.png`
-=======
-# StockSense
-StockSense – A full-stack stock data intelligence dashboard with FastAPI backend and React frontend, featuring real-time insights, comparisons, and interactive visualizations.
+## 🧠 How It Works
 
+1. User selects a company
+2. Backend fetches stock data using yfinance
+3. Data is processed (returns, volatility, trends)
+4. Frontend displays charts and insights
+
+---
+
+## 🚀 Deployment
+
+* Backend deployed on Render
+* Frontend deployed on Vercel
+* Environment-based API integration
+* CORS configured for secure communication
+
+---
+
+## 📄 License
+
+This project is for educational and portfolio purposes.
+
+---
+
+## 👨‍💻 Author
+
+**Ayush Raj**
+
+* GitHub: https://github.com/aaayu-07
+* LinkedIn: https://linkedin.com/in/ayush--raj
+
+---

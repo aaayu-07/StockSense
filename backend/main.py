@@ -18,6 +18,7 @@ app = FastAPI(
 default_origins = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
+    "https://stock-sense-pearl-xi.vercel.app",
     "https://your-frontend-url.vercel.app",
 ]
 configured_origins = [
